@@ -17,14 +17,9 @@ def remove_punct(text):
     >>> remove_punct(",go!So.?uTh")
     'goSouTh'
     """
-   no_punct = ""
-    for char in text:
-        if not (char in string.punctuation):
-            no_punct = no_punct + char
+    return "".join (char for char in text if char not in string.punctuation)
+ 
 
-    return no_punct
-    # The pass statement does nothing. Replace it with the body of your function.
-    
     
 def remove_spaces(text):
     """This function is used to remove leading and trailing spaces from a string.
@@ -155,7 +150,7 @@ def is_valid_exit(exits, user_input):
     >>> is_valid_exit(rooms["Parking"]["exits"], "east")
     True
     """
-     if user_input in exits:
+    if user_input in exits:
         return True
     else:
         return False
@@ -175,7 +170,7 @@ def menu(exits):
     while True:
         pass
         # COMPLETE THIS PART:
-         print_menu(exits)
+        print_menu(exits)
         # Display menu
         print_menu(exits)
        # Read player's input
@@ -185,7 +180,7 @@ def menu(exits):
             return user_input
         # Check if the input makes sense (is valid exit)
             # If so, return the player's choice
-         if is_valid_exit(exits, user_input) == True:
+        if is_valid_exit(exits, user_input) == True:
             return user_input
         else:
             print("Can't go there!")
