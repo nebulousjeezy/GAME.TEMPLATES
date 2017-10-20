@@ -360,7 +360,6 @@ def main():
             # Execute the player's command
             execute_command(command)
         print(rooms["Tutor"]["changed"])
-        print(sandwich)
     else:
         print("""
          __     ______  _    _  __          _______ _   _   _ 
