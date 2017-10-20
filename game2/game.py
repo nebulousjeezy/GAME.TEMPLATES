@@ -40,8 +40,7 @@ def print_room_items(room):
     There is a pen here.
     <BLANKLINE>
     >>> print_room_items(rooms["Admins"])
-    (no output)
-    Note: <BLANKLINE> here means that doctest should expect a blank line.
+    <BLANKLINE>
     """
     if list_of_items(room["items"]) != "":
         print("There is " + list_of_items(room["items"]) + " here.")
